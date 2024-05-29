@@ -65,20 +65,20 @@ class _TelaQuizState extends State<QuizStartDificil> {
       pergunta: '1 - Como a adaptação neuromuscular contribui para o aumento da força muscular?',
       respostas: ['Aumento do número de unidades motoras recrutadas', 'Melhoria da eficiência da contração muscular', 'Aumento da força das fibras musculares', ' Todas as opções'],
       respostaCorreta: 'Todas as opções',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/supino.png',
     ),
     Pergunta(
       pergunta:
           '2 - Qual técnica de treinamento envolve a utilização de pesos mais pesados e menos repetições?',
       respostas: ['Treino de força máxima', 'Treino de hipertrofia com repetições moderadas', ' Treino de resistência muscular', 'Treino de volume alemão'],
       respostaCorreta: 'Treino de força máxima',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/deadlift.png',
     ),
     Pergunta(
       pergunta: '3 - Qual macronutriente fornece energia imediata durante o exercício intenso?',
       respostas: ['Carboidratos', 'Gorduras', 'Proteína', 'Glicose'],
       respostaCorreta: 'Glicose',
-      imagemPath: 'assets/imagens/trofeu_olimpia.png',
+      imagemPath: 'assets/imagens/nutrientes.png',
     ),
     Pergunta(
       pergunta: '4 - Qual tipo de treinamento de alta intensidade é conhecido por aumentar significativamente o hormônio do crescimento (GH)?',
@@ -89,7 +89,7 @@ class _TelaQuizState extends State<QuizStartDificil> {
         'Treino de superconjuntos'
       ],
       respostaCorreta: 'Treino intervalado de alta intensidade (HIIT)',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/ledpress.png',
     ),
     Pergunta(
       pergunta: '5 - Qual técnica de treinamento envolve a realização de séries com repetições muito altas (mais de 15)?',
@@ -100,7 +100,7 @@ class _TelaQuizState extends State<QuizStartDificil> {
         'Treino de alta intensidade com volume reduzido'
       ],
       respostaCorreta: 'Treino de volume alemão',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/scot.png',
     ),
     Pergunta(
       pergunta: '6 - Qual suplemento pode auxiliar na preservação da massa muscular durante a fase de definição?',
@@ -111,31 +111,31 @@ class _TelaQuizState extends State<QuizStartDificil> {
         'Peptídeos de caseína'
       ],
       respostaCorreta: 'Peptídeos de caseína',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/creatina.png',
     ),
     Pergunta(
       pergunta: '7 - Como a hipertrofia muscular sarcoplasmática contribui para o aumento do tamanho muscular?',
       respostas: ['Aumento do número de fibras musculares', 'Aumento do tamanho das fibras musculares', 'Aumento da força das fibras musculares', 'Todas as opções'],
       respostaCorreta: 'Aumento do tamanho das fibras musculares',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/curvada.png',
     ),
     Pergunta(
       pergunta: '8 - Qual tipo de treinamento é mais eficaz para estimular o crescimento muscular de iniciantes?',
       respostas: ['Treino de alta intensidade com volume reduzido', 'Treino de volume alemão', 'Treino de hipertrofia com repetições moderadas', 'Treino de força máxima'],
       respostaCorreta: 'Treino de hipertrofia com repetições moderadas',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/barra.png',
     ),
     Pergunta(
       pergunta: '9 - O que causa a dor muscular de início tardio (DOMS) após o exercício?',
       respostas: ['Acúmulo de ácido láctico', 'Depleção de glicogênio', 'Microlesões nas fibras musculares', 'Desequilíbrio hidroeletrolítico'],
       respostaCorreta: 'Microlesões nas fibras musculares',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/dor_muscular.png',
     ),
     Pergunta(
       pergunta: '10 - Qual mecanismo fisiológico contribui para a fadiga muscular durante o exercício intenso?',
       respostas: ['Aumento da concentração de lactato nos músculos', 'Redução das reservas de glicogênio nos músculos', 'Aumento da temperatura corporal', 'Todas as opções'],
       respostaCorreta: 'Todas as opções',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/cansaço.png',
     ),
   ];
 
@@ -173,7 +173,7 @@ class _TelaQuizState extends State<QuizStartDificil> {
       appBar: AppBar(
         title: const Text(
           'Quiz Gym',
-          style: TextStyle(color: Color.fromARGB(255, 207, 196, 35)
+          style: TextStyle(color: Color.fromARGB(255, 207, 196, 35),fontFamily: 'Queen'
           ),
         ),
         backgroundColor: Color.fromARGB(255, 79, 79, 79),
@@ -214,7 +214,7 @@ class _TelaQuizState extends State<QuizStartDificil> {
                       padding: const EdgeInsets.all(20.0),
                       child: Align(
                         alignment: Alignment.topRight,
-                        child: Text('Pergunta ${_perguntaAtual + 1} de 8'),
+                        child: Text('Pergunta ${_perguntaAtual + 1} de 10',style: TextStyle(fontFamily: 'Poet')),
                       ),
                     ),
                     Stack(
@@ -232,7 +232,7 @@ class _TelaQuizState extends State<QuizStartDificil> {
                         ),
                         Column(
                           children: [
-                            Text('$_tempoRestante'),
+                            Text('$_tempoRestante',style: TextStyle(fontFamily: 'Poet'),),
                           ],
                         )
                       ],
@@ -240,8 +240,8 @@ class _TelaQuizState extends State<QuizStartDificil> {
                     SizedBox(height: 20),
                     
                     SizedBox(
-                      width: 100.0,
-                      height: 100.0,
+                      width: 120.0,
+                      height: 120.0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image.asset(
@@ -253,7 +253,7 @@ class _TelaQuizState extends State<QuizStartDificil> {
                     SizedBox(height: 50),
                     Text(
                       _perguntasdificil[_perguntaAtual].pergunta,
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 20,fontFamily: 'Poet'),
                     ),
                     SizedBox(height: 50),
                     Wrap(
@@ -269,7 +269,7 @@ class _TelaQuizState extends State<QuizStartDificil> {
                                   _perguntasdificil[_perguntaAtual].respostas[0]);
                             },
                             child: Text(
-                                _perguntasdificil[_perguntaAtual].respostas[0],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasdificil[_perguntaAtual].respostas[0],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                                 style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,
@@ -287,7 +287,7 @@ class _TelaQuizState extends State<QuizStartDificil> {
                                   _perguntasdificil[_perguntaAtual].respostas[1]);
                             },
                             child: Text(
-                                _perguntasdificil[_perguntaAtual].respostas[1],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasdificil[_perguntaAtual].respostas[1],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                                    style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,
@@ -313,7 +313,7 @@ class _TelaQuizState extends State<QuizStartDificil> {
                                   _perguntasdificil[_perguntaAtual].respostas[2]);
                             },
                             child: Text(
-                                _perguntasdificil[_perguntaAtual].respostas[2],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasdificil[_perguntaAtual].respostas[2],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                           style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,
@@ -329,7 +329,7 @@ class _TelaQuizState extends State<QuizStartDificil> {
                                   _perguntasdificil[_perguntaAtual].respostas[3]);
                             },
                             child: Text(
-                                _perguntasdificil[_perguntaAtual].respostas[3],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasdificil[_perguntaAtual].respostas[3],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                           style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,

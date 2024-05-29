@@ -65,14 +65,14 @@ class _TelaQuizState extends State<QuizStartFacil> {
       pergunta: '1 - Qual método de treinamento envolve levantar pesos progressivamente mais pesados ao longo do tempo?',
       respostas: ['Treino em circuito', 'Superconjuntos', 'Conjuntos decrescentes', 'Sobrecarga progressiva'],
       respostaCorreta: 'Superconjuntos',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/esteira.png',
     ),
     Pergunta(
       pergunta:
           '2 - Qual macronutriente é essencial para o crescimento e reparo muscular?',
       respostas: ['Carboidratos', 'Gorduras', 'Proteína', 'Todas as opções'],
       respostaCorreta: 'Proteína',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/nutrientes.png',
     ),
     Pergunta(
       pergunta: '3 - Qual é a competição de fisiculturismo mais prestigiada do mundo?',
@@ -89,7 +89,7 @@ class _TelaQuizState extends State<QuizStartFacil> {
         'Miogênese'
       ],
       respostaCorreta: 'Hipertrofia',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/supino.png',
     ),
     Pergunta(
       pergunta: '5 - Qual hormônio desempenha um papel crucial no crescimento e desenvolvimento muscular?',
@@ -100,7 +100,7 @@ class _TelaQuizState extends State<QuizStartFacil> {
         'Todas as opções'
       ],
       respostaCorreta: 'Todas as opções',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/anabol.png',
     ),
     Pergunta(
       pergunta: '6 - Qual fator NÃO é essencial para o crescimento muscular ideal?',
@@ -111,31 +111,31 @@ class _TelaQuizState extends State<QuizStartFacil> {
         'Programa de treinamento eficaz'
       ],
       respostaCorreta: 'Treino excessivo',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/barra.png',
     ),
     Pergunta(
       pergunta: '7 - Que papel a genética desempenha na determinação do potencial de fisiculturismo de um indivíduo?',
       respostas: ['Muito pouco', 'Moderado', 'Significativo', 'Nulo'],
       respostaCorreta: 'Significativo',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/ramon-dino.png',
     ),
     Pergunta(
       pergunta: '8 - Quais são os sinais e sintomas do overtraining?',
       respostas: ['Aumento da energia e motivação', 'Dor muscular e fadiga consistentes', 'Melhoria do desempenho e recuperação', 'Diminuição do apetite e da qualidade do sono'],
       respostaCorreta: 'Dor muscular e fadiga consistentes',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/overtraing.png',
     ),
     Pergunta(
       pergunta: '9 - Qual exercício composto é o mias ideal para trabalhar diversos grupos musculares ao mesmo tempo?',
       respostas: ['Agachamento', 'Supino reto', 'Remada curvada', 'Flexões de braço'],
       respostaCorreta: 'Agachamento',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/ledpress.png',
     ),
     Pergunta(
       pergunta: '10 - Qual alimento é considerado uma boa fonte de proteína vegetal?',
       respostas: ['Carne bovina', 'Ovos', 'Feijão', 'Salmão'],
       respostaCorreta: 'Feijão',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/protein.png',
     ),
   ];
 
@@ -173,7 +173,7 @@ class _TelaQuizState extends State<QuizStartFacil> {
       appBar: AppBar(
         title: const Text(
           'Quiz Gym',
-          style: TextStyle(color: Color.fromARGB(255, 207, 196, 35)
+          style: TextStyle(color: Color.fromARGB(255, 207, 196, 35),fontFamily: 'Queen'
           ),
         ),
         backgroundColor: Color.fromARGB(255, 79, 79, 79),
@@ -214,7 +214,7 @@ class _TelaQuizState extends State<QuizStartFacil> {
                       padding: const EdgeInsets.all(20.0),
                       child: Align(
                         alignment: Alignment.topRight,
-                        child: Text('Pergunta ${_perguntaAtual + 1} de 8'),
+                        child: Text('Pergunta ${_perguntaAtual + 1} de 10',style: TextStyle(fontFamily: 'Poet'),),
                       ),
                     ),
                     Stack(
@@ -232,16 +232,16 @@ class _TelaQuizState extends State<QuizStartFacil> {
                         ),
                         Column(
                           children: [
-                            Text('$_tempoRestante'),
+                            Text('$_tempoRestante',style:TextStyle(fontFamily: 'Poet') ,),
                           ],
-                        )
+                        ),
                       ],
                     ),
                     SizedBox(height: 20),
                     
                     SizedBox(
-                      width: 100.0,
-                      height: 100.0,
+                      width: 120.0,
+                      height: 120.0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image.asset(
@@ -252,8 +252,8 @@ class _TelaQuizState extends State<QuizStartFacil> {
                     ),
                     SizedBox(height: 50),
                     Text(
-                      _perguntasfacil[_perguntaAtual].pergunta,
-                      style: TextStyle(fontSize: 20),
+                        _perguntasfacil[_perguntaAtual].pergunta,
+                      style: TextStyle(fontSize: 20,fontFamily: 'Poet'),
                     ),
                     SizedBox(height: 50),
                     Wrap(
@@ -269,7 +269,7 @@ class _TelaQuizState extends State<QuizStartFacil> {
                                   _perguntasfacil[_perguntaAtual].respostas[0]);
                             },
                             child: Text(
-                                _perguntasfacil[_perguntaAtual].respostas[0],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasfacil[_perguntaAtual].respostas[0],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                                 style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,
@@ -287,7 +287,7 @@ class _TelaQuizState extends State<QuizStartFacil> {
                                   _perguntasfacil[_perguntaAtual].respostas[1]);
                             },
                             child: Text(
-                                _perguntasfacil[_perguntaAtual].respostas[1],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasfacil[_perguntaAtual].respostas[1],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                                    style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,
@@ -313,7 +313,7 @@ class _TelaQuizState extends State<QuizStartFacil> {
                                   _perguntasfacil[_perguntaAtual].respostas[2]);
                             },
                             child: Text(
-                                _perguntasfacil[_perguntaAtual].respostas[2],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasfacil[_perguntaAtual].respostas[2],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                           style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,
@@ -329,7 +329,7 @@ class _TelaQuizState extends State<QuizStartFacil> {
                                   _perguntasfacil[_perguntaAtual].respostas[3]);
                             },
                             child: Text(
-                                _perguntasfacil[_perguntaAtual].respostas[3],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasfacil[_perguntaAtual].respostas[3],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                           style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,

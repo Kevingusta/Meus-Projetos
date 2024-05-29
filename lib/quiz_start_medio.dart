@@ -65,20 +65,20 @@ class _TelaQuizState extends State<QuizStartMedio> {
       pergunta: '1 - Qual processo metabólico é responsável pela produção de energia durante o exercício de alta intensidade?',
       respostas: ['Glicogênese', 'Glicolise anaeróbica', 'Ciclo de Krebs', 'Fosforilação oxidativa'],
       respostaCorreta: 'Glicolise anaeróbica',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/deadlift.png',
     ),
     Pergunta(
       pergunta:
           '2 - Qual técnica de treinamento envolve a realização de várias séries de um exercício até a falha muscular?',
       respostas: ['Drop sets', 'Treino de pausa-descanso', 'Treino de volume alemão', 'Todas as opções'],
       respostaCorreta: 'Todas as opções',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/cansaço.png',
     ),
     Pergunta( 
       pergunta: '3 - Qual suplemento pode auxiliar na recuperação muscular e na redução da dor pós-treino?',
       respostas: ['Creatina', 'Beta-alanina', 'Zinco', 'Whey Protein'],
       respostaCorreta: 'Creatina',
-      imagemPath: 'assets/imagens/trofeu_olimpia.png',
+      imagemPath: 'assets/imagens/suplemento.png',
     ),
     Pergunta(
       pergunta: '4 - Como o sono influencia o crescimento muscular?',
@@ -89,7 +89,7 @@ class _TelaQuizState extends State<QuizStartMedio> {
         'Todas as opções'
       ],
       respostaCorreta: 'Todas as opções',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/sono.png',
     ),
     Pergunta(
       pergunta: '5 - Qual fator NÃO contribui para o risco de lesões no fisiculturismo?',
@@ -100,7 +100,7 @@ class _TelaQuizState extends State<QuizStartMedio> {
         'Flexibilidade adequada'
       ],
       respostaCorreta: 'Flexibilidade adequada',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/lesão.png',
     ),
     Pergunta(
       pergunta: '6 - Como o estresse crônico pode afetar o progresso no fisiculturismo?',
@@ -111,31 +111,31 @@ class _TelaQuizState extends State<QuizStartMedio> {
         'Todas as opções'
       ],
       respostaCorreta: 'Todas as opções',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/estresse.png',
     ),
     Pergunta(
       pergunta: '7 - Qual tipo de dieta é mais eficaz para definir o físico e reduzir a gordura corporal?',
       respostas: ['Dieta rica em carboidratos e baixa em proteínas', 'Dieta rica em proteínas e baixa em carboidratos', 'Dieta cetogênica', 'Dieta com ciclo de carboidratos'],
       respostaCorreta: 'Dieta rica em proteínas e baixa em carboidratos',
-      imagemPath: 'assets/imagens/no_pain_no_gain.png',
+      imagemPath: 'assets/imagens/nutrientes.png',
     ),
     Pergunta(
       pergunta: '8 - O que causa a fadiga muscular durante o exercício?',
       respostas: ['Acúmulo de ácido láctico', 'Depleção de glicogênio', 'Microlesões nas fibras musculares', 'Todas as opções'],
       respostaCorreta: 'Todas as opções',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/cansaço.png',
     ),
     Pergunta(
       pergunta: '9 - Qual é o benefício do treinamento cardiovascular para musculação?',
       respostas: ['Aumenta a massa muscular', 'Melhora a saúde cardiovascular', 'Queima gordura corporal', 'Todas as opções'],
       respostaCorreta: 'Todas as opções',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/esteira.png',
     ),
     Pergunta(
       pergunta: '10 - Qual nutriente é crucial para a absorção e utilização de proteínas pelo corpo?',
       respostas: ['Carboidratos', 'Gorduras', 'Vitaminas', 'Minerais'],
       respostaCorreta: 'Minerais',
-      imagemPath: 'assets/imagens/quizgym_amarelo.png',
+      imagemPath: 'assets/imagens/protein.png',
     ),
   ];
 
@@ -173,7 +173,7 @@ class _TelaQuizState extends State<QuizStartMedio> {
       appBar: AppBar(
         title: const Text(
           'Quiz Gym',
-          style: TextStyle(color: Color.fromARGB(255, 207, 196, 35)
+          style: TextStyle(color: Color.fromARGB(255, 207, 196, 35),fontFamily: 'Queen'
           ),
         ),
         backgroundColor: Color.fromARGB(255, 79, 79, 79),
@@ -214,7 +214,7 @@ class _TelaQuizState extends State<QuizStartMedio> {
                       padding: const EdgeInsets.all(20.0),
                       child: Align(
                         alignment: Alignment.topRight,
-                        child: Text('Pergunta ${_perguntaAtual + 1} de 8'),
+                        child: Text('Pergunta ${_perguntaAtual + 1} de 10',style: TextStyle(fontFamily: 'Poet')),
                       ),
                     ),
                     Stack(
@@ -232,7 +232,7 @@ class _TelaQuizState extends State<QuizStartMedio> {
                         ),
                         Column(
                           children: [
-                            Text('$_tempoRestante'),
+                            Text('$_tempoRestante',style: TextStyle(fontFamily: 'Poet'),),
                           ],
                         )
                       ],
@@ -240,8 +240,8 @@ class _TelaQuizState extends State<QuizStartMedio> {
                     SizedBox(height: 20),
                     
                     SizedBox(
-                      width: 100.0,
-                      height: 100.0,
+                      width: 120.0,
+                      height: 120.0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image.asset(
@@ -253,7 +253,7 @@ class _TelaQuizState extends State<QuizStartMedio> {
                     SizedBox(height: 50),
                     Text(
                       _perguntasmedio[_perguntaAtual].pergunta,
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 20,fontFamily: 'Poet'),
                     ),
                     SizedBox(height: 50),
                     Wrap(
@@ -269,7 +269,7 @@ class _TelaQuizState extends State<QuizStartMedio> {
                                   _perguntasmedio[_perguntaAtual].respostas[0]);
                             },
                             child: Text(
-                                _perguntasmedio[_perguntaAtual].respostas[0],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasmedio[_perguntaAtual].respostas[0],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                                 style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,
@@ -287,7 +287,7 @@ class _TelaQuizState extends State<QuizStartMedio> {
                                   _perguntasmedio[_perguntaAtual].respostas[1]);
                             },
                             child: Text(
-                                _perguntasmedio[_perguntaAtual].respostas[1],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasmedio[_perguntaAtual].respostas[1],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                                    style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,
@@ -313,7 +313,7 @@ class _TelaQuizState extends State<QuizStartMedio> {
                                   _perguntasmedio[_perguntaAtual].respostas[2]);
                             },
                             child: Text(
-                                _perguntasmedio[_perguntaAtual].respostas[2],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasmedio[_perguntaAtual].respostas[2],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                           style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,
@@ -329,7 +329,7 @@ class _TelaQuizState extends State<QuizStartMedio> {
                                   _perguntasmedio[_perguntaAtual].respostas[3]);
                             },
                             child: Text(
-                                _perguntasmedio[_perguntaAtual].respostas[3],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),),
+                                _perguntasmedio[_perguntaAtual].respostas[3],style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),fontFamily: 'Poet'),),
                           style: ElevatedButton.styleFrom(
                             textStyle: TextStyle(fontSize: 17),
                             elevation: 15,

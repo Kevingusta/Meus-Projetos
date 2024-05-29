@@ -13,13 +13,13 @@ class TelaResultado extends StatelessWidget {
 
 Widget _exibirTexto(int pontuacao){
 if (pontuacao >5){
-  return Text('                             Parabéns!!\n Você provou que possui um conhecimento\n           profundo do mundo do fitness.\n          Voçê acertou $pontuacao de $totalPerguntas e errou $erros',
-  style: TextStyle(fontSize: 25,fontFamily: 'Quee'),
+  return Text('                                Parabéns!!\n Você provou que possui um conhecimento\n           profundo do mundo do fitness.\n          Voçê acertou $pontuacao de $totalPerguntas   e errou $erros',
+  style: TextStyle(fontSize: 25,fontFamily: 'Poet'),
   );
 }else{
   
   return Text('Voçê precisa melhorar!!\n        acertou $pontuacao de $totalPerguntas\n            e errou $erros',
-  style: TextStyle(fontSize: 25,fontFamily: 'Quee'),
+  style: TextStyle(fontSize: 25,fontFamily: 'Poet'),
   );
 }
 }
@@ -37,7 +37,7 @@ if (pontuacao >5){
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Resultado do Quiz',style: TextStyle(fontSize: 20),),titleTextStyle: TextStyle(color: Color.fromARGB(255, 207, 196, 35)),
+      appBar: AppBar(title: Text('Resultado do Quiz',style: TextStyle(fontSize: 20,fontFamily: 'Queen'),),titleTextStyle: TextStyle(color: Color.fromARGB(255, 207, 196, 35)),
      backgroundColor: Color.fromARGB(255, 79, 79, 79),
       ),
       
@@ -103,13 +103,13 @@ if (pontuacao >5){
                       children: [
                       Text(
                         pontuacao.toString(),
-                        style: const TextStyle(fontSize: 70),
+                        style: const TextStyle(fontSize: 70,fontFamily: 'Poet'),
                       ),
                       const SizedBox(height: 10),
                       Text(
                         '${(pontuacao / totalPerguntas * 100).round()}%',
-                        style: const TextStyle(fontSize: 20),
-                      )
+                        style: const TextStyle(fontSize: 20,fontFamily: 'Poet'),
+                      ),
                       ],
                     ),
                   ],
@@ -125,7 +125,7 @@ if (pontuacao >5){
                 MaterialPageRoute(builder: (context) => MyWidget()),
                );
                     }, 
-                    child: Text('Jogar Novamente',style: TextStyle(color: Color.fromRGBO(233, 204, 38, 0.992)), ),
+                    child: Text('Jogar Novamente',style: TextStyle(color: Color.fromRGBO(233, 204, 38, 0.992),fontFamily: 'Poet'), ),
                     style: ElevatedButton.styleFrom(
                           backgroundColor: Color.fromRGBO(31, 26, 26, 0.953),
                           textStyle: TextStyle(fontSize: 35),

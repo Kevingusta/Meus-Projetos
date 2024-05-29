@@ -85,7 +85,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-fonts:
+  fonts:
      - family: Dancing
        fonts:
         - asset: assets/fontes/DancingScript-VariableFont_wght.ttf

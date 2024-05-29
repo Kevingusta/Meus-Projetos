@@ -107,7 +107,8 @@ class _MyWidgetState extends State<MyWidgetPage> {
                         groupValue: _selectedDifficulty,
                         title: const Text(
                           'Fácil',
-                          style: TextStyle(color: Color.fromRGBO(228, 226, 226, 1)),
+                          style: TextStyle(color: Color.fromRGBO(228, 226, 226, 1),fontFamily: 'Poet'),
+                        
                         ),
                         onChanged: (value) =>
                             setState(() => _selectedDifficulty = value),
@@ -120,7 +121,7 @@ class _MyWidgetState extends State<MyWidgetPage> {
                     groupValue: _selectedDifficulty,
                     title: const Text(
                       'Médio',
-                      style: TextStyle(color: Color.fromRGBO(228, 226, 226, 1)),
+                      style: TextStyle(color: Color.fromRGBO(228, 226, 226, 1),fontFamily: 'Poet'),
                     ),
                     onChanged: (value) =>
                         setState(() => _selectedDifficulty = value),
@@ -131,7 +132,7 @@ class _MyWidgetState extends State<MyWidgetPage> {
                     groupValue: _selectedDifficulty,
                     title: const Text(
                       'Difícil',
-                      style: TextStyle(color: Color.fromRGBO(228, 226, 226, 1)),
+                      style: TextStyle(color: Color.fromRGBO(228, 226, 226, 1),fontFamily: 'Poet'),
                     ),
                     onChanged: (value) =>
                         setState(() => _selectedDifficulty = value),
